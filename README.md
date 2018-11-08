@@ -28,7 +28,7 @@ http://blog.didispace.com/springcloud5/
             <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
         </dependency>
 
-    ---
+    -------
 
       <dependencyManagement>
         <dependencies>
@@ -46,7 +46,7 @@ http://blog.didispace.com/springcloud5/
 
 使用的时候根据service名字来使用
 ```java
-      @Autowired
+    @Autowired
     RestTemplate restTemplate;
 
     public String hiService(String name) {
