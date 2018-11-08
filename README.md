@@ -19,8 +19,14 @@ http://blog.didispace.com/springcloud5/
 ### 2.ribbon service pom使用官方
 
 ```xml
-    spring-cloud-starter-netflix-eureka-client
-    spring-cloud-starter-netflix-ribbon
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+        </dependency>
 ```
 
 使用的时候根据service名字来使用
