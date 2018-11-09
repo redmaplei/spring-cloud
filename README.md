@@ -114,3 +114,6 @@ ribbon一样进行负载均衡切换消费服务
 
 ![输入图片说明](https://images.gitee.com/uploads/images/2018/1109/162404_8f36982d_792824.png "Hystrix-2.png")
 
+没有加有断路器，然后client服务都关闭的时候
+是这样的
+![输入图片说明](https://images.gitee.com/uploads/images/2018/1109/162851_30f51765_792824.png "client关闭 使用.png")
