@@ -18,7 +18,7 @@ public class ServiceRibbonApplication {
     }
 
     /**
-     *ribbon负载均衡
+     * ribbon负载均衡 bean
      **/
     @Bean
     @LoadBalanced

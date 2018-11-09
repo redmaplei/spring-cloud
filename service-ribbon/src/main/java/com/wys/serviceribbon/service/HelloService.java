@@ -12,6 +12,8 @@ public class HelloService {
     RestTemplate restTemplate;
 
     /**
+     * ***** 负载均衡找服务所在 *****
+     *
      * ribbon 负载均衡
      * 自动去找client服务
      * 加入段路由器模式

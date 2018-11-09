@@ -6,11 +6,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
+ * ***** 负载均衡找服务所在 *****
+ *
  * client一改了端口号之后，就要重新启动Service-feign服务
  *  * 不然只能找到前面发现的端口号的服务
  * 是根据服务名字来找，不支持消费的服务动态的端口号修改
  */
-@FeignClient(value = "client")
+@FeignClient(value = "client", fallback = SchedualServiceHiHystric.class)
 public interface SchedualServiceHi {
 
     @RequestMapping(value = "/hi", method = RequestMethod.GET)
