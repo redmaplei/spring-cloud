@@ -124,3 +124,38 @@ client注册信息还在的时候，会调用  当没了的时候，好像不调
 没有加有断路器，然后client服务都关闭的时候
 是这样的
 ![输入图片说明](https://images.gitee.com/uploads/images/2018/1109/162851_30f51765_792824.png "client关闭 使用.png")
+
+### 4 feign 使用hystrix
+和ribbon 作用差不多
+使用有区别
+
+SchedualServiceHi 接口使用
+```java
+
+@FeignClient(value = "client", fallback = SchedualServiceHiHystric.class)
+public interface SchedualServiceHi {
+
+    @RequestMapping(value = "/hi", method = RequestMethod.GET)
+    String sayHiFromOneClient(@RequestParam(value = "name") String name);
+
+
+}
+```
+增加一个接口的实现类 用来处理断路器
+```java
+package com.wys.servicefeign;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class SchedualServiceHiHystric implements SchedualServiceHi {
+
+    @Override
+    public String sayHiFromOneClient(String name) {
+        return "sorry feign "+name;
+    }
+}
+
+```
+
+##### 然后client 都开启了后，等Eureka 服务注册中心 把client注册成功了，有注册信息后，负载均衡一样可以正常使用
