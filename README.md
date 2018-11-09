@@ -79,6 +79,8 @@ public interface SchedualServiceHi {
 }
 ```
 
+## 熔断器处理 hystrix
+
 ### 4 ribbon 使用hystrix 
 
 ```java
