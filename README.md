@@ -57,3 +57,24 @@ http://blog.didispace.com/springcloud5/
 -----
 ![ribbon-2](https://images.gitee.com/uploads/images/2018/1108/175706_c8b66335_792824.png "ribbon-2.png")
 
+### 3.feigin service 负载均衡
+
+采用的是基于接口的注解
+
+```java
+/**
+ * client一改了端口号之后，就要重新启动Service-feign服务
+ *  * 不然只能找到前面发现的端口号的服务
+ * 是根据服务名字来找，不支持消费的服务动态的端口号修改
+ */
+@FeignClient(value = "client")
+public interface SchedualServiceHi {
+
+    @RequestMapping(value = "/hi", method = RequestMethod.GET)
+    String sayHiFromOneClient(@RequestParam(value = "name") String name);
+
+
+}
+```
+
+
