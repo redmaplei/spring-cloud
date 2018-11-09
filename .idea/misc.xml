@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/client/pom.xml" />
         <option value="$PROJECT_DIR$/client2/pom.xml" />
         <option value="$PROJECT_DIR$/service-ribbon/pom.xml" />
+        <option value="$PROJECT_DIR$/service-feign/pom.xml" />
       </list>
     </option>
   </component>

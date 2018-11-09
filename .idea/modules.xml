@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/client/client.iml" filepath="$PROJECT_DIR$/client/client.iml" />
       <module fileurl="file://$PROJECT_DIR$/client2/client2.iml" filepath="$PROJECT_DIR$/client2/client2.iml" />
       <module fileurl="file://$PROJECT_DIR$/server/server.iml" filepath="$PROJECT_DIR$/server/server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-feign/service-feign.iml" filepath="$PROJECT_DIR$/service-feign/service-feign.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-ribbon/service-ribbon.iml" filepath="$PROJECT_DIR$/service-ribbon/service-ribbon.iml" />
     </modules>
   </component>

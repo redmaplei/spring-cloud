@@ -15,6 +15,9 @@ public class ServiceRibbonApplication {
         SpringApplication.run(ServiceRibbonApplication.class, args);
     }
 
+    /**
+     *ribbon负载均衡
+     **/
     @Bean
     @LoadBalanced
     RestTemplate restTemplate() {
