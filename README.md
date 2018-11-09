@@ -95,7 +95,9 @@ public interface SchedualServiceHi {
    }
 ```
 ### 使用
+
 | Application | AMIs | Availability Zones | Status |
+|-------|---------------|-----|-----|
 | CLIENT      | n/a (2) |   (2)      | UP (2) - 192.168.1.107:client:8002 , 192.168.1.107:client:8001 |
 
 1.client都开  正常使用
@@ -109,5 +111,6 @@ ribbon一样进行负载均衡切换消费服务
 
 3.都关闭
 都是段路了
+
 ![输入图片说明](https://images.gitee.com/uploads/images/2018/1109/162404_8f36982d_792824.png "Hystrix-2.png")
 
