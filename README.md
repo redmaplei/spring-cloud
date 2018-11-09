@@ -16,7 +16,9 @@ http://blog.didispace.com/springcloud5/
 ### 1.eureka 服务的注册与发现
     client名字可以一样
 ![服务注册](https://images.gitee.com/uploads/images/2018/1108/175558_fb9661f5_792824.png "eureka服务注册.png")
-### 2.ribbon service pom使用官方
+### 2.ribbon service 负载均衡，调用其他的服务
+
+pom使用官方
 
 ```xml
         <dependency>
@@ -57,7 +59,7 @@ http://blog.didispace.com/springcloud5/
 -----
 ![ribbon-2](https://images.gitee.com/uploads/images/2018/1108/175706_c8b66335_792824.png "ribbon-2.png")
 
-### 3.feigin service 负载均衡
+### 3.feigin service 负载均衡，调用其他的服务
 
 采用的是基于接口的注解
 
