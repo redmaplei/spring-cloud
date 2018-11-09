@@ -79,4 +79,34 @@ public interface SchedualServiceHi {
 }
 ```
 
+### 4 ribbon 使用hystrix 
+
+```java
+@EnableHystrix
+
+
+@HystrixCommand(fallbackMethod = "hiError")
+   public String hiService(String name) {
+       return restTemplate.getForObject("http://client/hi?name="+name,String.class);
+   }
+
+   public String hiError(String name) {
+       return "hi,"+name+",sorry,error!";
+   }
+```
+使用
+|Application | AMIs | Availability Zones | Status
+CLIENT       | n/a (2) |   (2)      | UP (2) - 192.168.1.107:client:8002 , 192.168.1.107:client:8001
+
+1.client都开  正常使用
+
+2.关闭一个client 8001 让断路器生效
+ribbon一样进行负载均衡切换消费服务 
+当消费关闭的那个服务时，会起断路器作用
+![输入图片说明](https://images.gitee.com/uploads/images/2018/1109/162252_7f379cae_792824.png "Hystrix-1.png")
+
+![输入图片说明](https://images.gitee.com/uploads/images/2018/1109/162305_4671d256_792824.png "Hystrix-2.png")
+
+3.都关闭
+都是段路了![输入图片说明](https://images.gitee.com/uploads/images/2018/1109/162404_8f36982d_792824.png "Hystrix-2.png")
 
